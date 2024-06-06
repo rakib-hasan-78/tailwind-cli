@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+@tailwind  base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer  base{
+    h1{
+        @apply text-5xl font-semibold uppercase text-slate-600 underline underline-offset-8 decoration-wavy decoration-purple-500 text-center;
+    }
+}
+
+@layer components {
+  .btn-green{
+    @apply bg-emerald-700 text-emerald-100 m-10 rounded-md p-3 pl-12 pr-12 shadow-2xl shadow-purple-300 text-lg capitalize tracking-widest font-semibold;
+  }
+}
+.content-area{
+  @apply bg-gray-600 text-slate-300 font-custom text-lg;
+  height:theme('height.128');
+}
+@media screen(md){
+  body{
+    @apply bg-red-700 text-green-600;
+  }
+  .content-area{
+    @apply bg-green-300 text-slate-300 font-custom text-sm;
+  }
+
+}
